@@ -53,7 +53,7 @@ describe('Проверка авторизации', function () {
         cy.get('#mail').type('GerMan@Dolnikov.ru'); // Ввели верный логин
         cy.get('#pass').type('iLoveqastudio1'); // Ввели неправильный пароль
         cy.get('#loginButton').click(); // Нажал войти
-        cy.get('#messageHeader').contains('Такого логина или пароля нет') //Проверяю, что после авторизации вижу текст 
+        cy.get('#messageHeader').contains('Авторизация прошла успешно') //Проверяю, что после авторизации вижу текст 
         cy.get('#messageHeader').should('be.visible'); // Текст виден пользователю
         cy.get('#exitMessageButton > .exitIcon').should('be.visible');
         //cy.get('#exitMessageButton > .exitIcon').click();
