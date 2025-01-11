@@ -52,7 +52,7 @@ describe('Проверка авторизации', function () {
         cy.get(main_page.email).type('GerMan@Dolnikov.ru'); // Ввели верный логин
         cy.get(main_page.password).type(data.password); // Ввели неправильный пароль
         cy.get(main_page.login_button).click(); // Нажал войти
-        cy.get(result_page.title).contains('Такого логина или пароля нет') //Проверяю, что после авторизации вижу текст 
+        cy.get(result_page.title).contains('Авторизация прошла успешно') //Проверяю, что после авторизации вижу текст 
         cy.get(result_page.title).should('be.visible'); // Текст виден пользователю
         //cy.get('#exitMessageButton > .exitIcon').click();
     })
